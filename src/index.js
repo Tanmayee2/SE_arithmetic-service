@@ -1,12 +1,17 @@
+require('dotenv').config()
 const express = require('express');
 const cors = require('cors');
 const {add} = require("./arithmetica");
 const app = express();
 app.use(cors());
-const port = 3000;
 
+if(!process.env.PORT) {
+    throw new Error(`Please specify the port number for the http server with the environment variable PORT.`);
+}
+
+const port = process.env.PORT;
 app.get('/', (req,res) => {
-    res.send('Arithmetic service - last updated 15 Feb 7:15');
+    res.send('Arithmetic service - last updated 5th March 19:50');
 });
 
 app.get('/add/:n/:m', (req,res) => {
