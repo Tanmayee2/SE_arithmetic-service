@@ -20,6 +20,6 @@ jobs:
 
             - name: Publish the image to azure container registry
               run: |
-                docker login --username practicum15t --password ${{secrets.AZURE_CONTAINER_REGISTRY}} practicum15t.azurecr.io
-                docker tag ghcr.io/tanmayee2/arithmetic-service:latest practicum15t.azurecr.io/arithmetic-service:1  
-                docker push practicum15t.azurecr.io/arithmetic-service:1
+                docker login --username practicum16ta --password ${{secrets.AZURE_CONTAINER_REGISTRY}} practicum16ta.azurecr.io
+                docker tag ghcr.io/tanmayee2/arithmetic-service:latest practicum16ta.azurecr.io/arithmetic-service:1  
+                docker push practicum16ta.azurecr.io/arithmetic-service:1
